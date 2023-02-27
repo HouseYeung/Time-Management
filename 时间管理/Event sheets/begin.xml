@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>begin</name>
+    <events>
+        <comment>turn 0圆圈向右，1向左</comment>
+        <variable constant="0" name="turn" sid="893701321710665" static="0" type="number">0</variable>
+        <comment>switch 0 t递增 1 t递减</comment>
+        <variable constant="0" name="switch" sid="411192592092787" static="0" type="number">0</variable>
+        <variable constant="0" name="t" sid="789281138900030" static="0" type="number">1</variable>
+        <event-block sid="264700109197608">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="902599250325855" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="456475122136563" type="circle">
+                    <param id="0" name="X">300</param>
+                    <param id="1" name="Y">640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="289381492749799">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="406975599461684" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="697101321359898" type="circle">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">1680 - t</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="280437432472799" type="circle">
+                    <param id="0" name="X">circle.X + t</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528305335312023">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="230490019463419" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="579771172454274" type="circle">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">300 + t</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="937754642226425" type="circle">
+                    <param id="0" name="X">circle.X - t</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="145245311729754">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="297666415213094" type="System">
+                    <param id="0" name="Variable">switch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="739825468680211" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="565349688142020" type="System">
+                    <param id="0" name="Variable">t</param>
+                    <param id="1" name="Value">0.03</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165890967151810">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="684163898162702" type="System">
+                    <param id="0" name="Variable">switch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="523920499562510" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="651080363625805" type="System">
+                    <param id="0" name="Variable">t</param>
+                    <param id="1" name="Value">0.03</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="936463377494113">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="719452251458294" type="circle">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">300 + t</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="759569277996907" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="606806523123868" type="System">
+                    <param id="0" name="Variable">t</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="365637049138926" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="547846799933312" type="circle">
+                    <param id="0" name="Duration">0.3</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;on&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="132388716372125">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="434604410286382" type="circle">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">1680 - t</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="595535466349456" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="194528548205036" type="System">
+                    <param id="0" name="Variable">t</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="403678719792912" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="795921902519754" type="circle">
+                    <param id="0" name="Duration">0.3</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;on1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="895360802011563">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="426803753586886" type="circle">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">990</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="635414831503750" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="675810161431868" type="System">
+                    <param id="0" name="Variable">switch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="915471210940372">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="334363605997440" type="circle">
+                    <param id="0" name="Tag">&quot;on&quot;</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="544689737982359" type="circle">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">990</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="265949757075225" type="System">
+                    <param id="0" name="Variable">switch</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="215176742594031">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="682427796300437" type="circle">
+                    <param id="0" name="Tag">&quot;on1&quot;</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="503331405543964" type="circle">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">990</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="274696063477764" type="System">
+                    <param id="0" name="Variable">switch</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="273439350754248">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="758895555998848" type="circle">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">990</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="113635479481799" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="534373836310234" type="System">
+                    <param id="0" name="Variable">switch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="547789840320132">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="832808919394778" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="632682625502238">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="572329935413107" type="circle">
+                    <param id="0" name="Tag">&quot;on&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="770223405081605" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606470101779665">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="456402420462268" type="circle">
+                    <param id="0" name="Tag">&quot;on1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="858334027165486" type="System">
+                    <param id="0" name="Variable">turn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="783752481612783">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="350208752281938" type="Touch">
+                    <param id="0" name="Object">circle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="555457918621744" type="System">
+                    <param id="0" name="Layout">Mechanical</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

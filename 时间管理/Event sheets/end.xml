@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>end</name>
+    <events>
+        <event-block sid="677876932930344">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="639822584223245" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="267527750952040" type="end">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="372556170060872" type="endtime">
+                    <param id="0" name="Text">Date.Year &amp; &quot;/&quot; &amp; Date.Month &amp; &quot;/&quot; &amp; Date.Date &amp; &quot; &quot; &amp; zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="128642432832069" type="endtime">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="924221631094289" type="endtime">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">500</param>
+                </action>
+                <action id="-15" name="Set visible" sid="861103836311226" type="end1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="226760115252116" type="end1">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">600</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="464488889216333" type="control">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;s&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="383832386873418" type="control">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="821837428397297">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="792900466612774" type="control">
+                    <param id="0" name="Tag">&quot;s&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="471972420437008" type="control">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="905644822239878">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="955452951945334" type="Touch" />
+                <condition id="-7" name="Compare instance variable" sid="104395607175021" type="control">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="892839097670159" type="control">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;s&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="122198963726551" type="control">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="251225997655153" type="control">
+                    <param id="0" name="Instance variable">end</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="600731453613087">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="985834210138825" type="control">
+                    <param id="0" name="Instance variable">end</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="398987457707295" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="532809122875461" type="end1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="948943033525894" type="end2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="176048733113116" type="end2">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">600</param>
+                </action>
+                <action id="0" name="Set text" sid="773455982198420" type="endtime">
+                    <param id="0" name="Text">Date.Year &amp; &quot;/&quot; &amp; Date.Month &amp; &quot;/&quot; &amp; Date.Date &amp; &quot; &quot; &amp; zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="215648125014317">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="215436811227288" type="control">
+                    <param id="0" name="Instance variable">end</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="829418124006509" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="366408623100969" type="end2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="431825894880500" type="end3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="284779080823418" type="end3">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">600</param>
+                </action>
+                <action id="0" name="Set text" sid="366832040538051" type="endtime">
+                    <param id="0" name="Text">Date.Year &amp; &quot;/&quot; &amp; Date.Month &amp; &quot;/&quot; &amp; Date.Date &amp; &quot; &quot; &amp; zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="844698597594862">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="169954801745314" type="control">
+                    <param id="0" name="Instance variable">end</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="415088404085381" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="647826344048223" type="end3">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="797489404891193" type="end5">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="400600889080155" type="end5">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">600</param>
+                </action>
+                <action id="0" name="Set text" sid="155405462660092" type="endtime">
+                    <param id="0" name="Text">Date.Year &amp; &quot;/&quot; &amp; Date.Month &amp; &quot;/&quot; &amp; Date.Date &amp; &quot; &quot; &amp; zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="929376461992447">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="280494916351610" type="control">
+                    <param id="0" name="Instance variable">end</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="161518847218133" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="733948066686265" type="end">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="945959854633695" type="end4">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="200205987224561" type="end4">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">600</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

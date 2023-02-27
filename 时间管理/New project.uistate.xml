@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">end</layout>
+        <layout order="1">Digital</layout>
+        <layout order="2">Mechanical</layout>
+        <layout order="3">Fragmentation</layout>
+        <event-sheet order="0">Mechanical</event-sheet>
+        <event-sheet order="1">Digital</event-sheet>
+        <event-sheet order="2">Drown</event-sheet>
+        <event-sheet active="1" order="3">Fragmentation</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="clock" />
+        <family expanded="0" name="items" />
+        <family expanded="0" name="A" />
+        <family expanded="0" name="line" />
+        <family expanded="0" name="Family" />
+        <family expanded="0" name="C" />
+        <family expanded="0" name="end" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/begin/" />
+        <folder expanded="1" path="object-folder/Digital/" />
+        <folder expanded="1" path="object-folder/Fragmentation/" />
+        <folder expanded="1" path="object-folder/Mechanical/" />
+        <folder expanded="1" path="object-folder/Drown/" />
+        <folder expanded="0" path="object-folder/Drown/A/" />
+        <folder expanded="0" path="object-folder/Life/" />
+        <folder expanded="1" path="object-folder/Life/Sub/" />
+        <folder expanded="0" path="object-folder/end/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/circle/" />
+        <folder expanded="1" path="animation-folder/dot/" />
+        <folder expanded="1" path="animation-folder/bills/" />
+        <folder expanded="1" path="animation-folder/calls/" />
+        <folder expanded="1" path="animation-folder/email/" />
+        <folder expanded="1" path="animation-folder/events/" />
+        <folder expanded="1" path="animation-folder/Hourglass/" />
+        <folder expanded="1" path="animation-folder/lists/" />
+        <folder expanded="1" path="animation-folder/mail/" />
+        <folder expanded="1" path="animation-folder/schedule/" />
+        <folder expanded="1" path="animation-folder/Sponge/" />
+        <folder expanded="1" path="animation-folder/stickies/" />
+        <folder expanded="1" path="animation-folder/tasks/" />
+        <folder expanded="1" path="animation-folder/thoughts/" />
+        <folder expanded="1" path="animation-folder/tomato/" />
+        <folder expanded="1" path="animation-folder/hour/" />
+        <folder expanded="1" path="animation-folder/minute/" />
+        <folder expanded="1" path="animation-folder/second/" />
+        <folder expanded="1" path="animation-folder/gear/" />
+        <folder expanded="1" path="animation-folder/gear2/" />
+        <folder expanded="1" path="animation-folder/box/" />
+        <folder expanded="1" path="animation-folder/A1/" />
+        <folder expanded="1" path="animation-folder/A10/" />
+        <folder expanded="1" path="animation-folder/A12/" />
+        <folder expanded="1" path="animation-folder/A15/" />
+        <folder expanded="1" path="animation-folder/A14/" />
+        <folder expanded="1" path="animation-folder/A2/" />
+        <folder expanded="1" path="animation-folder/A3/" />
+        <folder expanded="1" path="animation-folder/A4/" />
+        <folder expanded="1" path="animation-folder/A13/" />
+        <folder expanded="1" path="animation-folder/A11/" />
+        <folder expanded="1" path="animation-folder/A7/" />
+        <folder expanded="1" path="animation-folder/A8/" />
+        <folder expanded="1" path="animation-folder/A6/" />
+        <folder expanded="1" path="animation-folder/A5/" />
+        <folder expanded="1" path="animation-folder/A9/" />
+        <folder expanded="1" path="animation-folder/RR/" />
+        <folder expanded="1" path="animation-folder/wall/" />
+        <folder expanded="1" path="animation-folder/arrow/" />
+        <folder expanded="1" path="animation-folder/circle1/" />
+        <folder expanded="1" path="animation-folder/head/" />
+        <folder expanded="1" path="animation-folder/friend/" />
+        <folder expanded="1" path="animation-folder/head2/" />
+        <folder expanded="1" path="animation-folder/dot1/" />
+        <folder expanded="1" path="animation-folder/control/" />
+    </folders-expanded>
+</c2uistate>

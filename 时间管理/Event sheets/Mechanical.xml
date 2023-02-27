@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Mechanical</name>
+    <events>
+        <variable constant="0" name="touch" sid="945853543692371" static="0" type="number">0</variable>
+        <event-block sid="194716909244355">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="204042203155224" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="344655755370648" type="mechanical">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;title&quot;</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="786398389572406" type="hour">
+                    <param id="0" name="Degrees">240</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="591564117016691" type="minute">
+                    <param id="0" name="Degrees">120</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="567781009761527" type="second">
+                    <param id="0" name="Degrees">60</param>
+                </action>
+                <action id="-15" name="Set visible" sid="729564758176584" type="box">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="313211362424704">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="916016099454115" type="mechanical">
+                    <param id="0" name="Tag">&quot;title&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="576777961887676" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="605908957529326" type="clock" />
+            </actions>
+        </event-block>
+        <event-block sid="723821520596338">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="443244860351878" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="195004355772927" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="446390665300427" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="879814416237227" type="second">
+                    <param id="0" name="Degrees">6</param>
+                </action>
+                <action id="-10" name="Add to" sid="226246147847684" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="434748864496951" type="control">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;s&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="232704474218551" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904731039126856">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="819080439982486" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="921920912292409" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="312027848276012" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="749410768676422" type="clock">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="186679320971104" type="clock" />
+                <action id="-15" name="Set visible" sid="708289992918565" type="gear">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="995684973999396" type="gear" />
+                <action id="-15" name="Set visible" sid="523236229658318" type="gear2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="458060045159917" type="gear2" />
+            </actions>
+        </event-block>
+        <event-block sid="477123312295734">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="454119797914169" type="control">
+                    <param id="0" name="Tag">&quot;s&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="540338761755167" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="396953732364447">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="784912146127121" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="301024036466013" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="414256551462118" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="531650229427630" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="110950419340170" type="gear">
+                    <param id="0" name="Degrees">-1.8</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="873619766800236" type="gear2">
+                    <param id="0" name="Degrees">1.8</param>
+                </action>
+                <action id="-10" name="Add to" sid="719658503233341" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="465561478061405" type="control">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;s&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="702819525138010" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="246548634545128">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="444305443497170" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="689568043491136" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="653457655276835" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="704769045619965" type="gear">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="214651878045894" type="gear" />
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="248280612193904" type="gear2">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="982846677063922" type="gear2" />
+                <action id="-15" name="Set visible" sid="418258786365489" type="box">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531026020533175">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="893990588124572" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="506952058921576" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="535114061987496" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="672555638560867" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="959433289513866" type="control">
+                    <param id="0" name="Duration">0.5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;s&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="281520194622222" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="284288045371329" type="control">
+                    <param id="0" name="Instance variable">box</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="150616755997763">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="601088492004638" type="System">
+                            <param id="0" name="Object">box</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="494841953148708" type="box">
+                            <param id="0" name="X">box.X + 100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="372397364660329">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="383599918112276" type="control">
+                    <param id="0" name="Instance variable">box</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="525246368222279" type="System">
+                    <param id="0" name="Object to create">box</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">540</param>
+                </action>
+                <action id="-10" name="Set value" sid="577657320429833" type="control">
+                    <param id="0" name="Instance variable">box</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>box要touch 20下</comment>
+        <event-block sid="817248492133522">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="504799397504544" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="712691327976474" type="System">
+                    <param id="0" name="Layout">Digital</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="734697560171613">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="699830440446847" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="779792443284169" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="984392185003629" type="m1" />
+                <action id="-15" name="Set visible" sid="443751697529672" type="m1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="573707637079477">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="592593607611988" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="935350921871833" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="392918584655856" type="m2" />
+                <action id="-15" name="Set visible" sid="145916459741710" type="m2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="817002451100728">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="961533287441031" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">15</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="294401784833877" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="490587208911015" type="m3" />
+                <action id="-15" name="Set visible" sid="681347967006661" type="m3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="380717903806809">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="763670282172409" type="System">
+                    <param id="0" name="Variable">touch</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">25</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="682687553770723" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="883705692519135" type="m4" />
+                <action id="-15" name="Set visible" sid="793328303606360" type="m4">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1396 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>tjetea1gnyku</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1980</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="begin">
+            <object-type name="title2w" sid="584780441798106">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="titlew" sid="564340262808790">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="title2b" sid="157872415327549">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="maker" sid="440269755921805">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="circle" sid="779500919697978">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="981821596361009">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312555645288325" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\circle.png">
+                            <collision-poly>
+                                <point x="0.14539" y="0.14539" />
+                                <point x="0.5" y="0" />
+                                <point x="0.85461" y="0.14539" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85461" y="0.85461" />
+                                <point x="0.5" y="1" />
+                                <point x="0.14539" y="0.85461" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="titleb" sid="854813670196389">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Digital">
+            <object-type name="digital" sid="976702894859868">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="846909954716910">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Realtime" sid="399347714301371">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="dot" sid="664855978126934">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="start" sid="294666262913424" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685479554086703" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="Date" sid="340759555880188">
+                <plugin id="Rex_Date" />
+            </object-type>
+            <object-type name="d1" sid="461324719328605">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="406436477812841">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="d2" sid="466388116498829">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="928620051272402">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="Fragmentation">
+            <object-type name="bills" sid="406238435411623">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="620613595812599" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 2.png">
+                            <collision-poly>
+                                <point x="0.0686275" y="0.12069" />
+                                <point x="0.5" y="0.163793" />
+                                <point x="0.813725" y="0.327586" />
+                                <point x="0.995098" y="0.5" />
+                                <point x="0.5" y="0.517241" />
+                                <point x="0.122549" y="0.784483" />
+                                <point x="0.0686275" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="calls" sid="168673905724859">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="937601582952275" speed="5">
+                        <frame duration="1" hotspotX="0.502392" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 4.png">
+                            <collision-poly>
+                                <point x="0.0813397" y="0.188889" />
+                                <point x="0.497608" y="0.2" />
+                                <point x="0.942584" y="0.133333" />
+                                <point x="0.205742" y="0.5" />
+                                <point x="0.708134" y="0.322222" />
+                                <point x="0.497608" y="0.988889" />
+                                <point x="0.00956938" y="0.977778" />
+                                <point x="0.00478469" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="email" sid="786752478504154">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826080755280444" speed="5">
+                        <frame duration="1" hotspotX="0.502924" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 6.png">
+                            <collision-poly>
+                                <point x="0.0701754" y="0.1875" />
+                                <point x="0.497076" y="0.265625" />
+                                <point x="0.847953" y="0.40625" />
+                                <point x="0.912281" y="0.5" />
+                                <point x="0.929825" y="0.8125" />
+                                <point x="0.0526316" y="0.859375" />
+                                <point x="0.0116959" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="events" sid="309371364520251">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602484152704518" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 8.png">
+                            <collision-poly>
+                                <point x="0.00442478" y="0.0131579" />
+                                <point x="0.5" y="0.460526" />
+                                <point x="0.849558" y="0.447368" />
+                                <point x="0.973451" y="0.5" />
+                                <point x="0.942478" y="0.828947" />
+                                <point x="0.5" y="0.671053" />
+                                <point x="0.00442478" y="0.986842" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fragmentation" sid="812961641051838">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="313475626059348">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Hourglass" sid="987029558604902">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="turn" sid="625951177274870" type="number" />
+                    <instance-variable name="r" sid="556213435025563" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="924018470527916" speed="5">
+                        <frame duration="1" hotspotX="0.500803" hotspotY="0.500406" original-source="C:\Users\yjj07\Desktop\175780c367a32af.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="lists" sid="583794252860215">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="250080234045392" speed="5">
+                        <frame duration="1" hotspotX="0.50237" hotspotY="0.505263" original-source="C:\Users\yjj07\Desktop\New folder\图层 5.png">
+                            <collision-poly>
+                                <point x="0.00473934" y="0.0105263" />
+                                <point x="0.49763" y="0.694737" />
+                                <point x="0.805687" y="0.431579" />
+                                <point x="0.900474" y="0.494737" />
+                                <point x="0.810427" y="0.578947" />
+                                <point x="0.00473934" y="0.989474" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="mail" sid="998231016863347">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404065396569059" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 10.png">
+                            <collision-poly>
+                                <point x="0.0133333" y="0.0166667" />
+                                <point x="0.993333" y="0.00833333" />
+                                <point x="1" y="0.5" />
+                                <point x="0.78" y="0.725" />
+                                <point x="0.5" y="0.975" />
+                                <point x="0.106667" y="0.866667" />
+                                <point x="0.00666667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="schedule" sid="132178109484036">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="move" sid="419114947701759" type="number" />
+                    <instance-variable name="score" sid="404848664940336" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="358512305933794" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\schedule.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sponge" sid="313530733482594">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="touch" sid="307426791461203" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155175468967536" speed="5">
+                        <frame duration="1" hotspotX="0.501401" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\qwe.png">
+                            <collision-poly>
+                                <point x="0.498599" y="0.0727273" />
+                                <point x="0.941176" y="0.0954545" />
+                                <point x="1" y="0.5" />
+                                <point x="0.817927" y="0.704545" />
+                                <point x="0.498599" y="0.972727" />
+                                <point x="0.0756303" y="0.877273" />
+                                <point x="0.00560224" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="stickies" sid="303237022796051">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429820244671732" speed="5">
+                        <frame duration="1" hotspotX="0.503226" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 7.png">
+                            <collision-poly>
+                                <point x="0.354839" y="0.392857" />
+                                <point x="0.496774" y="0.0142857" />
+                                <point x="0.832258" y="0.185714" />
+                                <point x="0.812903" y="0.5" />
+                                <point x="0.980645" y="0.978571" />
+                                <point x="0.0322581" y="0.964286" />
+                                <point x="0.329032" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tasks" sid="757560182711341">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670273966493435" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 3.png">
+                            <collision-poly>
+                                <point x="0.0277778" y="0.0282258" />
+                                <point x="0.5" y="0.00403226" />
+                                <point x="0.68254" y="0.322581" />
+                                <point x="0.853175" y="0.5" />
+                                <point x="0.825397" y="0.822581" />
+                                <point x="0.5" y="0.951613" />
+                                <point x="0.305556" y="0.689516" />
+                                <point x="0.0992064" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="thoughts" sid="560784542427111">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="461289038431845" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503597" original-source="C:\Users\yjj07\Desktop\New folder\图层 9.png">
+                            <collision-poly>
+                                <point x="0.106383" y="0.143885" />
+                                <point x="0.5" y="0.0143885" />
+                                <point x="0.898936" y="0.136691" />
+                                <point x="0.994681" y="0.496403" />
+                                <point x="0.930851" y="0.906475" />
+                                <point x="0.5" y="0.985611" />
+                                <point x="0.138298" y="0.81295" />
+                                <point x="0.00531915" y="0.496403" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="tomato" sid="991986122034013">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="n" sid="771701485887415" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="555441132105468" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\tomato.png">
+                            <collision-poly>
+                                <point x="0.109827" y="0.122581" />
+                                <point x="0.5" y="0.00322581" />
+                                <point x="0.895954" y="0.116129" />
+                                <point x="0.988439" y="0.5" />
+                                <point x="0.861272" y="0.845161" />
+                                <point x="0.5" y="0.996774" />
+                                <point x="0.141618" y="0.841935" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="f2" sid="711124466535531">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="147922637521597">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="f1" sid="392888677862189">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="458194912230392">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="Mechanical">
+            <object-type name="mechanical" sid="843637968753581">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="364968761884041">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="hour" sid="113061112204608">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="275005055817887" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.88" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="minute" sid="886152833661276">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="350060876897386" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.88" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="second" sid="948389774927180">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682617449837451" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.88" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="gear" sid="412156943485459">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="411643723124771">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="167272447009735" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\gear.png">
+                            <collision-poly>
+                                <point x="0.161" y="0.161" />
+                                <point x="0.5" y="0.021" />
+                                <point x="0.839" y="0.161" />
+                                <point x="0.988" y="0.5" />
+                                <point x="0.852" y="0.852" />
+                                <point x="0.5" y="1" />
+                                <point x="0.148" y="0.852" />
+                                <point x="0.011" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="gear2" sid="339676354796202">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="340392013433290">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875260876495814" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\gear.png">
+                            <collision-poly>
+                                <point x="0.161" y="0.161" />
+                                <point x="0.5" y="0.021" />
+                                <point x="0.839" y="0.161" />
+                                <point x="0.988" y="0.5" />
+                                <point x="0.852" y="0.852" />
+                                <point x="0.5" y="1" />
+                                <point x="0.148" y="0.852" />
+                                <point x="0.011" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="box" sid="288424513891297">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814972620560850" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\box.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="m1" sid="396531591756700">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="562091829044151">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="m2" sid="888052753027751">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="383380877226695">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="m3" sid="243021167440693">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="150582308356784">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="m4" sid="550475214388035">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="989449306188291">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="Drown">
+            <object-folder name="A">
+                <object-type name="A1" sid="960221892163683">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="768821951228336" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 1.png">
+                                <collision-poly>
+                                    <point x="0.243421" y="0.211429" />
+                                    <point x="0.5" y="0.00571429" />
+                                    <point x="0.782895" y="0.188571" />
+                                    <point x="0.934211" y="0.497143" />
+                                    <point x="0.756579" y="0.788571" />
+                                    <point x="0.5" y="0.868571" />
+                                    <point x="0.230263" y="0.8" />
+                                    <point x="0.0328947" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A10" sid="703786009747462">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999716107957114" speed="5">
+                            <frame duration="1" hotspotX="0.502825" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 10.png">
+                                <collision-poly>
+                                    <point x="0.231638" y="0.234286" />
+                                    <point x="0.497175" y="0.125714" />
+                                    <point x="0.836158" y="0.165714" />
+                                    <point x="0.915254" y="0.497143" />
+                                    <point x="0.824859" y="0.822857" />
+                                    <point x="0.497175" y="0.977143" />
+                                    <point x="0.118644" y="0.88" />
+                                    <point x="0.0677966" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A12" sid="741509457163020">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411702348315480" speed="5">
+                            <frame duration="1" hotspotX="0.502732" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 12.png">
+                                <collision-poly>
+                                    <point x="0.125683" y="0.131429" />
+                                    <point x="0.497268" y="0.0857143" />
+                                    <point x="0.830601" y="0.177143" />
+                                    <point x="0.939891" y="0.497143" />
+                                    <point x="0.863388" y="0.857143" />
+                                    <point x="0.497268" y="0.982857" />
+                                    <point x="0.15847" y="0.834286" />
+                                    <point x="0.0655738" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A15" sid="547628792190097">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636133747253252" speed="5">
+                            <frame duration="1" hotspotX="0.502591" hotspotY="0.503067" original-source="C:\Users\yjj07\Desktop\New folder\图层 15.png">
+                                <collision-poly>
+                                    <point x="0.497409" y="0.0920245" />
+                                    <point x="0.787565" y="0.251534" />
+                                    <point x="0.953368" y="0.496933" />
+                                    <point x="0.818653" y="0.785276" />
+                                    <point x="0.497409" y="0.98773" />
+                                    <point x="0.150259" y="0.822086" />
+                                    <point x="0.0621762" y="0.496933" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A14" sid="241317878253793">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="226791565078873" speed="5">
+                            <frame duration="1" hotspotX="0.503497" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 14.png">
+                                <collision-poly>
+                                    <point x="0.202797" y="0.165714" />
+                                    <point x="0.496504" y="0.0171429" />
+                                    <point x="0.678322" y="0.262857" />
+                                    <point x="0.986014" y="0.497143" />
+                                    <point x="0.888112" y="0.908571" />
+                                    <point x="0.48951" y="0.6" />
+                                    <point x="0.0839161" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A2" sid="136811185600062">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514831753818988" speed="5">
+                            <frame duration="1" hotspotX="0.502959" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 2.png">
+                                <collision-poly>
+                                    <point x="0.319527" y="0.308571" />
+                                    <point x="0.497041" y="0.08" />
+                                    <point x="0.816568" y="0.177143" />
+                                    <point x="0.934911" y="0.497143" />
+                                    <point x="0.940828" y="0.942857" />
+                                    <point x="0.497041" y="0.891429" />
+                                    <point x="0.272189" y="0.737143" />
+                                    <point x="0.100592" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A3" sid="876124728529089">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837705478447765" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 3.png">
+                                <collision-poly>
+                                    <point x="0.323864" y="0.325714" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.823864" y="0.497143" />
+                                    <point x="0.931818" y="0.931429" />
+                                    <point x="0.5" y="0.868571" />
+                                    <point x="0.0909091" y="0.908571" />
+                                    <point x="0.153409" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A4" sid="204590481926477">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="622679865122092" speed="5">
+                            <frame duration="1" hotspotX="0.502959" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 4.png">
+                                <collision-poly>
+                                    <point x="0.159763" y="0.154286" />
+                                    <point x="0.497041" y="0.194286" />
+                                    <point x="0.887574" y="0.108571" />
+                                    <point x="0.905325" y="0.497143" />
+                                    <point x="0.751479" y="0.76" />
+                                    <point x="0.497041" y="0.948571" />
+                                    <point x="0.177515" y="0.828571" />
+                                    <point x="0.0710059" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A13" sid="579190996235262">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211306026097374" speed="5">
+                            <frame duration="1" hotspotX="0.502762" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 13.png">
+                                <collision-poly>
+                                    <point x="0.19337" y="0.2" />
+                                    <point x="0.497238" y="0.0571429" />
+                                    <point x="0.834254" y="0.171429" />
+                                    <point x="0.883978" y="0.497143" />
+                                    <point x="0.812155" y="0.805714" />
+                                    <point x="0.497238" y="0.908571" />
+                                    <point x="0.265193" y="0.725714" />
+                                    <point x="0.110497" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A11" sid="481475874626273">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913559169726029" speed="5">
+                            <frame duration="1" hotspotX="0.503268" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 11.png">
+                                <collision-poly>
+                                    <point x="0.281046" y="0.245714" />
+                                    <point x="0.496732" y="0.0685714" />
+                                    <point x="0.843137" y="0.137143" />
+                                    <point x="0.954248" y="0.497143" />
+                                    <point x="0.843137" y="0.862857" />
+                                    <point x="0.496732" y="0.96" />
+                                    <point x="0.20915" y="0.817143" />
+                                    <point x="0.0130719" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A7" sid="413251362175031">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961286664175498" speed="5">
+                            <frame duration="1" hotspotX="0.502591" hotspotY="0.504274" original-source="C:\Users\yjj07\Desktop\New folder\图层 7.png">
+                                <collision-poly>
+                                    <point x="0.00518135" y="0.00854701" />
+                                    <point x="0.937824" y="0.102564" />
+                                    <point x="0.968912" y="0.948718" />
+                                    <point x="0.497409" y="0.957265" />
+                                    <point x="0.134715" y="0.777778" />
+                                    <point x="0.119171" y="0.495726" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A8" sid="554731086527501">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406939468510548" speed="5">
+                            <frame duration="1" hotspotX="0.503106" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 8.png">
+                                <collision-poly>
+                                    <point x="0.173913" y="0.16" />
+                                    <point x="0.496894" y="0.04" />
+                                    <point x="0.757764" y="0.222857" />
+                                    <point x="0.919255" y="0.497143" />
+                                    <point x="0.813665" y="0.828571" />
+                                    <point x="0.496894" y="0.982857" />
+                                    <point x="0.173913" y="0.84" />
+                                    <point x="0.0310559" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A6" sid="334020385233429">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="994559129824638" speed="5">
+                            <frame duration="1" hotspotX="0.502793" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 6.png">
+                                <collision-poly>
+                                    <point x="0.00558659" y="0.00568182" />
+                                    <point x="0.949721" y="0.0511364" />
+                                    <point x="0.927374" y="0.5" />
+                                    <point x="0.944134" y="0.943182" />
+                                    <point x="0.497207" y="0.988636" />
+                                    <point x="0.0167598" y="0.982955" />
+                                    <point x="0.0726257" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A5" sid="951496337942144">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372520149589639" speed="5">
+                            <frame duration="1" hotspotX="0.50289" hotspotY="0.502857" original-source="C:\Users\yjj07\Desktop\New folder\图层 5.png">
+                                <collision-poly>
+                                    <point x="0.208092" y="0.205714" />
+                                    <point x="0.49711" y="0.0171429" />
+                                    <point x="0.797688" y="0.2" />
+                                    <point x="0.988439" y="0.497143" />
+                                    <point x="0.861272" y="0.862857" />
+                                    <point x="0.49711" y="0.965714" />
+                                    <point x="0.17341" y="0.828571" />
+                                    <point x="0.0867052" y="0.497143" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="A9" sid="999413840898368">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="467083050703509" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\New folder\图层 9.png">
+                                <collision-poly>
+                                    <point x="0.151685" y="0.153409" />
+                                    <point x="0.5" y="0.0170455" />
+                                    <point x="0.865169" y="0.136364" />
+                                    <point x="0.988764" y="0.5" />
+                                    <point x="0.842697" y="0.840909" />
+                                    <point x="0.5" y="0.977273" />
+                                    <point x="0.146067" y="0.852273" />
+                                    <point x="0.011236" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="Realtime2" sid="581489753612104">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="RR" sid="956716136723646">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="N" sid="182425158838929" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930653952784266" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502283" original-source="C:\Users\yjj07\Desktop\rounded rectangle.png">
+                            <collision-poly>
+                                <point x="0.012931" y="0.0410959" />
+                                <point x="0.5" y="0" />
+                                <point x="0.987069" y="0.0410959" />
+                                <point x="1" y="0.497717" />
+                                <point x="0.987069" y="0.958904" />
+                                <point x="0.5" y="1" />
+                                <point x="0.012931" y="0.958904" />
+                                <point x="0" y="0.497717" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="news" sid="320042887680401">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="event" sid="313054336257575">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="drown" sid="947668899693303">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="859465417662082">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="wall" sid="550258391544227">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="203843596864953">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602185327414870" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Life">
+            <object-folder name="Sub">
+                <object-type name="c1" sid="599477033294932">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="362231290394063" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="557028139502031">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c10" sid="693805329230121">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="906269473995219" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="540959767054026">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c11" sid="357222125032802">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="705783991490395" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="102112156794395">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c12" sid="491223714259427">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="455983836352212" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="381489663822282">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c13" sid="347859821622699">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="750826687631830" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="388425817855746">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c14" sid="541892762957282">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="311043942977553" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="745568562134595">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c15" sid="493773677349741">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="221997302613760" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="861338713657494">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c16" sid="779458493142264">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="181222440611461" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="897765948569818">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c2" sid="437105310909589">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="385800453871596" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="201938145489340">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c3" sid="881652978778686">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="978339779782480" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="655815776554387">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c4" sid="110306141458060">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="580048396408553" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="533574377321169">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c5" sid="735445052929260">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="685613097175726" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="117216591256729">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c6" sid="337325611145819">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="645873051835504" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="708478278841622">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c7" sid="164521791398255">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="530309459845941" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="590015364545353">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c8" sid="408109893101284">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="498156862013133" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="545845151515082">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="c9" sid="636326066724447">
+                    <plugin id="Text" />
+                    <instance-variables>
+                        <instance-variable name="v" sid="464543040010198" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Fade" sid="976508804205761">
+                            <behavior id="Fade" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+            </object-folder>
+            <object-type name="arrow" sid="653586741490374">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="467571105114085">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="135541181334626" speed="5">
+                        <frame duration="1" hotspotX="0.501104" hotspotY="0.501279" original-source="C:\Users\yjj07\Desktop\arrow.png">
+                            <collision-poly>
+                                <point x="0.335541" y="0.388747" />
+                                <point x="0.498896" y="0.173913" />
+                                <point x="0.781457" y="0.253197" />
+                                <point x="0.986755" y="0.498721" />
+                                <point x="0.821192" y="0.792839" />
+                                <point x="0.498896" y="0.976982" />
+                                <point x="0.247241" y="0.713555" />
+                                <point x="0" y="0.498721" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="circle1" sid="259580178988745">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="230708424374056">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="113018210616224" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\yjj07\Desktop\circle.png">
+                            <collision-poly>
+                                <point x="0.150655" y="0.152655" />
+                                <point x="0.5" y="0" />
+                                <point x="0.864629" y="0.137168" />
+                                <point x="0.995633" y="0.5" />
+                                <point x="0.847162" y="0.845133" />
+                                <point x="0.5" y="1" />
+                                <point x="0.141921" y="0.856195" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="head" sid="491211335231202">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="672123203325846">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="351809514668527">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="750946220048504" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="friend" sid="911614289669605">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="674272223159096">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="694883891145873" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="head2" sid="644654439647857">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="h2x" sid="895000599159087" type="number" />
+                    <instance-variable name="h2y" sid="582504176671694" type="number" />
+                    <instance-variable name="h2l" sid="778267546081205" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690770184719197" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="dot1" sid="392308339357940">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="575317733939085">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="767296820914223">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="129115491108849" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Life" sid="556847825825465">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Timer" sid="948924100961153">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder name="end">
+            <object-type name="end3" sid="925361844317487">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="v" sid="327736688516638" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="270932593295506">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="endtime" sid="717381051171710">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="end1" sid="334322901869109">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="v" sid="418433559659878" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="136409571651300">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="end2" sid="729601950933928">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="v" sid="932271184779407" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="212952410800374">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="end4" sid="617521735174891">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="v" sid="374436627123717" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="317098699830398">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="end5" sid="168853166082382">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="v" sid="318045990885109" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="489545618744649">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="779455843579080">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="control" sid="512833822053715">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="move" sid="541176662348096" type="number" />
+                <instance-variable name="box" sid="466083533557551" type="number" />
+                <instance-variable name="RR" sid="389736891813838" type="number" />
+                <instance-variable name="start" sid="475956426357918" type="number" />
+                <instance-variable name="touch" sid="985719419169115" type="number" />
+                <instance-variable name="end" sid="518820704360162" type="number" />
+                <instance-variable name="n" sid="974157872242442" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="480231279733310">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861733572567333" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.88" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="clock" plugin-id="Sprite" sid="956582770892543">
+            <members>
+                <member>hour</member>
+                <member>minute</member>
+                <member>second</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="207015037783214">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="items" plugin-id="Sprite" sid="556814181594862">
+            <members>
+                <member>bills</member>
+                <member>calls</member>
+                <member>email</member>
+                <member>events</member>
+                <member>lists</member>
+                <member>mail</member>
+                <member>stickies</member>
+                <member>tasks</member>
+                <member>thoughts</member>
+            </members>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="437299494319686">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="A" plugin-id="Sprite" sid="250302659782667">
+            <members>
+                <member>A1</member>
+                <member>A10</member>
+                <member>A11</member>
+                <member>A12</member>
+                <member>A13</member>
+                <member>A14</member>
+                <member>A15</member>
+                <member>A2</member>
+                <member>A3</member>
+                <member>A4</member>
+                <member>A5</member>
+                <member>A6</member>
+                <member>A7</member>
+                <member>A8</member>
+                <member>A9</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="v" sid="461793992691314" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="628145930089722">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="line" plugin-id="Sprite" sid="510611764977615">
+            <members>
+                <member>dot1</member>
+            </members>
+        </family>
+        <family name="Family" plugin-id="Sprite" sid="596503956034620">
+            <members>
+                <member>friend</member>
+            </members>
+        </family>
+        <family name="C" plugin-id="Text" sid="449730653299473">
+            <members>
+                <member>c1</member>
+                <member>c10</member>
+                <member>c11</member>
+                <member>c12</member>
+                <member>c13</member>
+                <member>c14</member>
+                <member>c15</member>
+                <member>c16</member>
+                <member>c2</member>
+                <member>c3</member>
+                <member>c4</member>
+                <member>c5</member>
+                <member>c6</member>
+                <member>c7</member>
+                <member>c8</member>
+                <member>c9</member>
+                <member>d1</member>
+                <member>d2</member>
+                <member>end1</member>
+                <member>end2</member>
+                <member>end3</member>
+                <member>end4</member>
+                <member>end5</member>
+                <member>f1</member>
+                <member>f2</member>
+                <member>m1</member>
+                <member>m2</member>
+                <member>m3</member>
+                <member>m4</member>
+            </members>
+        </family>
+        <family name="end" plugin-id="Text" sid="836460576423782">
+            <members>
+                <member>d1</member>
+                <member>d2</member>
+                <member>end1</member>
+                <member>end2</member>
+                <member>end3</member>
+                <member>end4</member>
+                <member>end5</member>
+                <member>endtime</member>
+                <member>f1</member>
+                <member>f2</member>
+                <member>m1</member>
+                <member>m2</member>
+                <member>m3</member>
+                <member>m4</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>begin.xml</layout>
+        <layout>Mechanical.xml</layout>
+        <layout>Digital.xml</layout>
+        <layout>Fragmentation.xml</layout>
+        <layout>Drown.xml</layout>
+        <layout>Life.xml</layout>
+        <layout>end.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>begin.xml</event-sheet>
+        <event-sheet>Mechanical.xml</event-sheet>
+        <event-sheet>Digital.xml</event-sheet>
+        <event-sheet>Fragmentation.xml</event-sheet>
+        <event-sheet>Drown.xml</event-sheet>
+        <event-sheet>Life.xml</event-sheet>
+        <event-sheet>end.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="7">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

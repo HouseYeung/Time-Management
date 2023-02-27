@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Digital</name>
+    <events>
+        <event-block sid="499663146661439">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="735741906251901" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="370222261943260" type="digital">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;title&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="321860870010819" type="dot">
+                    <param id="0" name="X">-30</param>
+                    <param id="1" name="Y">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="800852438727513">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="518455791446915" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="622219058582438" type="Realtime">
+                    <param id="0" name="Text">zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562404083964959">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="594399808757175" type="digital">
+                    <param id="0" name="Tag">&quot;title&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="532188926256451" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="753062005227854" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="951442910449988" type="d1" />
+                <action id="-15" name="Set visible" sid="971096131231583" type="d1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="693981110579454">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="447201107724913" type="dot">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">1980</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="556176130805376" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="716400920050650" type="dot">
+                    <param id="0" name="X">dot.X + 40</param>
+                </action>
+                <action id="-3" name="Create object" sid="105895674337543" type="System">
+                    <param id="0" name="Object to create">dot</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">dot.X</param>
+                    <param id="3" name="Y">dot.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="899611208770111">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="104942897618247" type="dot">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">1070</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="880073321584942" type="dot">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">1970</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="504442842293808" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="870679060778093" type="dot">
+                    <param id="0" name="X">-30</param>
+                </action>
+                <action id="-2" name="Set Y" sid="566903604886142" type="dot">
+                    <param id="0" name="Y">dot.Y + 40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="408779879669580">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="822960104469049" type="dot">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">1070</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="250232227029075" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="422849068671470" type="dot">
+                    <param id="0" name="X">-10</param>
+                </action>
+                <action id="-2" name="Set Y" sid="205488681773048" type="dot">
+                    <param id="0" name="Y">30</param>
+                </action>
+                <action id="-10" name="Set value" sid="564709346313672" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="704194523551597">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="797488198748255" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="2" name="Is in touch" sid="324089785334282" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="688509515168943" type="dot">
+                    <param id="0" name="X">dot.X + 40</param>
+                </action>
+                <action id="-3" name="Create object" sid="950980002360101" type="System">
+                    <param id="0" name="Object to create">dot</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">dot.X</param>
+                    <param id="3" name="Y">dot.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139626750731886">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="177382893224539" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="977232687421789" type="dot">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">1070</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="842579228341941" type="dot">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">1970</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="747194698626263" type="dot">
+                    <param id="0" name="X">-10</param>
+                </action>
+                <action id="-2" name="Set Y" sid="236772026208089" type="dot">
+                    <param id="0" name="Y">dot.Y + 40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="129134245192198">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="150595187118865" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="645053289170750" type="dot">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">1070</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="294066382169279" type="System">
+                    <param id="0" name="Layout">Fragmentation</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="782525360180493">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="257715977108348" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="113601857738600" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="736876699383315" type="d2" />
+                <action id="-15" name="Set visible" sid="357715707846177" type="d2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Drown</name>
+    <events>
+        <event-block sid="959773483559323">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="894304048657738" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="592600945463379" type="System">
+                    <param id="0" name="Object to create">Realtime2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="477371262676907" type="RR">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">540</param>
+                </action>
+                <action id="-3" name="Set position" sid="654774409980112" type="event">
+                    <param id="0" name="X">RR.X - 230</param>
+                    <param id="1" name="Y">RR.Y + 25</param>
+                </action>
+                <action id="-3" name="Set position" sid="735956950786487" type="news">
+                    <param id="0" name="X">RR.X -230</param>
+                    <param id="1" name="Y">RR.Y - 20</param>
+                </action>
+                <action id="-3" name="Set position" sid="946088180174896" type="Realtime2">
+                    <param id="0" name="X">RR.X + 180</param>
+                    <param id="1" name="Y">RR.Y - 15</param>
+                </action>
+                <action id="0" name="Set text" sid="255857528849264" type="Realtime2">
+                    <param id="0" name="Text">zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2) </param>
+                </action>
+                <action id="-15" name="Set visible" sid="824372072126191" type="A">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="533502957508436" type="A">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="665573821747579" type="drown">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;t&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="878106941281550">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="589054570789461" type="drown">
+                    <param id="0" name="Tag">&quot;t&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="425172023795156" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="578910425596472">
+            <conditions>
+                <condition id="3" name="On touched object" sid="766297418100943" type="Touch">
+                    <param id="0" name="Object">RR</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="809681052140712" type="control">
+                    <param id="0" name="Instance variable">RR</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="406975243152133" type="control">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="526160700511000" type="System">
+                    <param id="0" name="Object to create">RR</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(1980)</param>
+                    <param id="3" name="Y">random(1080)</param>
+                </action>
+                <action id="-3" name="Create object" sid="691333565332804" type="System">
+                    <param id="0" name="Object to create">event</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">RR.X -230</param>
+                    <param id="3" name="Y">RR.Y + 25</param>
+                </action>
+                <action id="-3" name="Create object" sid="725005788209151" type="System">
+                    <param id="0" name="Object to create">news</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">RR.X -230</param>
+                    <param id="3" name="Y">RR.Y - 20</param>
+                </action>
+                <action id="-3" name="Create object" sid="406350268034185" type="System">
+                    <param id="0" name="Object to create">Realtime2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">RR.X + 180</param>
+                    <param id="3" name="Y">RR.Y - 15</param>
+                </action>
+                <action id="0" name="Set text" sid="760619917484910" type="Realtime2">
+                    <param id="0" name="Text">zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2) </param>
+                </action>
+                <action id="-11" name="Add to" sid="348139743875692" type="control">
+                    <param id="0" name="Instance variable">RR</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="981298641342987">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="556356564153827" type="control">
+                    <param id="0" name="Instance variable">RR</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="597945260798451" type="control">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="752320675035362">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="723295554283540" type="System">
+                            <param id="0" name="Object">RR</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="562403810103523" type="RR" />
+                    </actions>
+                </event-block>
+                <event-block sid="909511960571177">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="730241090212851" type="System">
+                            <param id="0" name="Object">event</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="401789284989289" type="event" />
+                    </actions>
+                </event-block>
+                <event-block sid="142055008134730">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="455959089986931" type="System">
+                            <param id="0" name="Object">news</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="548688363674258" type="news" />
+                    </actions>
+                </event-block>
+                <event-block sid="804905697629605">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="912236151805174" type="System">
+                            <param id="0" name="Object">Realtime2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="390333064990796" type="Realtime2" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="297187354795053">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="499322114924413" type="control">
+                    <param id="0" name="Instance variable">RR</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="415201701660212" type="control">
+                    <param id="0" name="Instance variable">RR</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="324020471852454" type="System">
+                    <param id="0" name="Object to create">RR</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(1980)</param>
+                    <param id="3" name="Y">random(1080)</param>
+                </action>
+                <action id="-3" name="Create object" sid="768128364575382" type="System">
+                    <param id="0" name="Object to create">event</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">RR.X -230</param>
+                    <param id="3" name="Y">RR.Y + 25</param>
+                </action>
+                <action id="-3" name="Create object" sid="520763209476522" type="System">
+                    <param id="0" name="Object to create">news</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">RR.X -230</param>
+                    <param id="3" name="Y">RR.Y - 20</param>
+                </action>
+                <action id="-3" name="Create object" sid="932390423279080" type="System">
+                    <param id="0" name="Object to create">Realtime2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">RR.X + 180</param>
+                    <param id="3" name="Y">RR.Y - 15</param>
+                </action>
+                <action id="0" name="Set text" sid="540175683470961" type="Realtime2">
+                    <param id="0" name="Text">zeropad(Date.Hours,2) &amp;  &quot;:&quot; &amp; zeropad(Date.Minutes,2) &amp; &quot;:&quot; &amp; zeropad(Date.Seconds,2) </param>
+                </action>
+                <action id="-11" name="Add to" sid="556694185348328" type="control">
+                    <param id="0" name="Instance variable">RR</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="368363209039588">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="625153718479553" type="control">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="810703299966120" type="A1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-group description="" sid="634252371331587" title="Group3">
+                    <sub-events>
+                        <event-block sid="978106180918140">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="345763057215832" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="636158999192581" type="A2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="124743416081054">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="588244960667054" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="583264242213869" type="A3">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="809469941112564">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="273597168680746" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="760753093444668" type="A4">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="897513777878005">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="611385185745338" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="470432255925115" type="A5">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="697395975086912">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="180620362244910" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="957554995676080" type="A6">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="583885831265519">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="454688655831900" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="346981199061155" type="A7">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="456912286384288">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="198000939363222" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="451023372128670" type="A8">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="964273249250060">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="542871892806172" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="572949889815390" type="A9">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="895204320802996">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="545078706632586" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="965228041601417" type="A10">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="869191944919071">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="342500410590888" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="491700998977555" type="A11">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="916546587345406">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="533311196629329" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="795751042579762" type="A12">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687884115860134">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="645947761126265" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="136596544297858" type="A13">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301504620180471">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="297712374171576" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="748661210422053" type="A14">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="497218824289541">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="843437809811298" type="control">
+                                    <param id="0" name="Instance variable">touch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">14</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="931344852361742" type="A15">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+        <event-block sid="819030650566819">
+            <conditions>
+                <condition id="3" name="On touched object" sid="475185385166915" type="Touch">
+                    <param id="0" name="Object">A</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="363504676252215" type="control">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="421875806151398" type="A">
+                    <param id="0" name="Instance variable">v</param>
+                    <param id="1" name="Value">A.v + 5</param>
+                </action>
+                <action id="-11" name="Add to" sid="195615333125811" type="control">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="1" name="Set acceleration" sid="422134142279917" type="A">
+                    <param id="0" name="Acceleration">A.v</param>
+                </action>
+                <action id="-8" name="Set angle" sid="261913335457611" type="A">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="478488084316289">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="307995031406203" type="control">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition behavior="Bullet" id="0" name="Compare speed" sid="775604865592478" type="A">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Speed">1500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="562366459598434" type="System">
+                    <param id="0" name="Layout">Life</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="422159052630671">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="678909192594799" type="control">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="397385664216962" type="control">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="706332019851381" type="System">
+                    <param id="0" name="Layout">Life</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Life</name>
+    <events>
+        <variable constant="0" name="life" sid="701941491802745" static="0" type="number">5</variable>
+        <variable constant="0" name="scroll" sid="372260280008426" static="0" type="number">0</variable>
+        <variable constant="0" name="draw2" sid="578234589926921" static="0" type="number">0</variable>
+        <variable constant="0" name="draw" sid="475312824086877" static="0" type="number">1</variable>
+        <comment>重叠的dot</comment>
+        <variable constant="0" name="IID" sid="682263553061629" static="0" type="number">0</variable>
+        <comment>dot的数量</comment>
+        <variable constant="0" name="n" sid="704844682002199" static="0" type="number">0</variable>
+        <comment>消除数</comment>
+        <variable constant="0" name="tg" sid="234261004121490" static="0" type="number">0</variable>
+        <comment>最大距离</comment>
+        <variable constant="0" name="txMAX" sid="341819265746249" static="0" type="number">0</variable>
+        <variable constant="0" name="tx" sid="571398935956554" static="0" type="number">990</variable>
+        <variable constant="0" name="ty" sid="679713397864224" static="0" type="number">540</variable>
+        <event-block sid="793117463193617">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="438052085117255" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="510715895659283" type="head">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">540</param>
+                </action>
+                <action id="-15" name="Set visible" sid="898678864242441" type="arrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="181115328797579" type="circle1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="896365009979947" type="System">
+                    <param id="0" name="Variable">draw</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="197953875375958" type="System">
+                    <param id="0" name="Variable">scroll</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="262986465725924" type="C">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="303950394717058" type="C">
+                    <param id="0" name="X">990</param>
+                    <param id="1" name="Y">1000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="654898692247245">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="270580849337325" type="System">
+                    <param id="0" name="First value">n</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">40</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="477141687003309" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="691796973275664" type="arrow">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="243640501569075" type="arrow" />
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="207232524995175" type="circle1">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="995853238533043" type="circle1" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="780606256265232" title="Scroll">
+            <sub-events>
+                <event-block sid="111436199975007">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="340973967819720" type="System">
+                            <param id="0" name="First value">txMAX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">tx</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="300281925647272" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Value">tx</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869197848469829">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="797468707743024" type="System">
+                            <param id="0" name="First value">txMAX - 540</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">tx</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="536012967599935" type="System">
+                            <param id="0" name="Variable">scroll</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="159143591412118" type="head">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="955268716905943">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="182017501586464" type="System">
+                            <param id="0" name="First value">txMAX - 540</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">tx</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="893376599082176" type="System">
+                            <param id="0" name="Variable">scroll</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="465292328681699" type="head">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="367335439385260" title="Draw">
+            <sub-events>
+                <event-block sid="809663916218164">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="683224943338862" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="926664469886784" type="System">
+                            <param id="0" name="First value">(Touch.X - tx)^2 + (Touch.Y - ty)^2 </param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">9</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="190652911425168" type="System">
+                            <param id="0" name="Variable">draw</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="207041617770049" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="785076190071681" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="361253542494163" type="System">
+                            <param id="0" name="Object to create">line</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">tx</param>
+                            <param id="3" name="Y">ty</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="795555401204049" type="head">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="252289151770186" type="head">
+                            <param id="0" name="Angle">head.Angle</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="948003342268425" type="System">
+                            <param id="0" name="Variable">tx</param>
+                            <param id="1" name="Value">head.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="593393749674415" type="System">
+                            <param id="0" name="Variable">ty</param>
+                            <param id="1" name="Value">head.y</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="826202768654797" type="System">
+                            <param id="0" name="Variable">draw2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="788948906157159" type="System">
+                            <param id="0" name="Variable">n</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>消除</comment>
+                <event-block sid="631891843896404">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="648422177528120" type="head">
+                            <param id="0" name="Object">dot1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="695816408120002" type="System">
+                            <param id="0" name="First value">dot1.IID</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">dot1(-1).IID - 2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="645487342033522" type="System">
+                            <param id="0" name="First value">dot1.IID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="198744022685707" type="System">
+                            <param id="0" name="First value">life = 1 | life =0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="684768419771890" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="177875063678260" type="System">
+                            <param id="0" name="Variable">IID</param>
+                            <param id="1" name="Value">dot1.IID</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="539311892498143" type="System">
+                            <param id="0" name="Variable">tx</param>
+                            <param id="1" name="Value">dot1(IID).X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="403733865051066" type="System">
+                            <param id="0" name="Variable">ty</param>
+                            <param id="1" name="Value">dot1(IID).Y</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="597096304729989" type="head">
+                            <param id="0" name="X">tx</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="962140050911450" type="head">
+                            <param id="0" name="Y">ty</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="157765612519305" type="System">
+                            <param id="0" name="Variable">tg</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="604958463867627" type="System">
+                            <param id="0" name="Variable">draw</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="810874580053255">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="338179724057372" type="System">
+                                    <param id="0" name="First value">dot1(-1).IID -IID</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="629189464364225">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="283401811530327" type="System">
+                                            <param id="0" name="Object">dot1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="638735786189170" type="System">
+                                            <param id="0" name="Object">dot1</param>
+                                            <param id="1" name="Expression">dot1.IID</param>
+                                            <param id="2" name="Comparison">5</param>
+                                            <param id="3" name="Value">IID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="115661193788368" type="dot1" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="362800897451645">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="177317023494009" type="System">
+                                    <param id="0" name="First value">dot1(-1).IID -IID</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="741775391227877">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="583656266691169" type="System">
+                                            <param id="0" name="Object">dot1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="756366423058123" type="System">
+                                            <param id="0" name="Object">dot1</param>
+                                            <param id="1" name="Expression">dot1.IID</param>
+                                            <param id="2" name="Comparison">5</param>
+                                            <param id="3" name="Value">IID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="600224229457976" type="dot1" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="671564637520088">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="380407114035665" type="System">
+                            <param id="0" name="First value">dot1(-1).IID</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">IID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="332731564685415" type="System">
+                            <param id="0" name="Variable">draw</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>阻止</comment>
+                <event-block sid="461033796736413">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="649101062899655" type="head">
+                            <param id="0" name="Object">dot1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="263831373384225" type="System">
+                            <param id="0" name="First value">dot1.IID</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">dot1(-1).IID - 3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="569702135448057" type="System">
+                            <param id="0" name="First value">life = 3 | life =2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="319429498573781" type="System">
+                            <param id="0" name="Variable">IID</param>
+                            <param id="1" name="Value">dot1(-1).IID - 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="771149645538044" type="System">
+                            <param id="0" name="Variable">tx</param>
+                            <param id="1" name="Value">dot1(IID).X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="182223734930661" type="System">
+                            <param id="0" name="Variable">ty</param>
+                            <param id="1" name="Value">dot1(IID).Y</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="418122371147752" type="head">
+                            <param id="0" name="X">tx</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="732428772769810" type="head">
+                            <param id="0" name="Y">ty</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="539268910843611">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="285771455509702" type="System">
+                                    <param id="0" name="Object">dot1</param>
+                                    <param id="1" name="Expression">dot1.IID</param>
+                                    <param id="2" name="Comparison">5</param>
+                                    <param id="3" name="Value">IID - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="463132212169729" type="dot1" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="613248091997822">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="521853965074651" type="head">
+                                    <param id="0" name="Object">dot1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="494166718817664" type="System">
+                                    <param id="0" name="First value">life = 3 | life =2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="369600646324652" type="System">
+                                    <param id="0" name="First value">dot1.IID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="690150523093104" type="System">
+                                    <param id="0" name="First value">dot1.IID</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">dot1(-1).IID - 3</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="898498719764396" type="System">
+                                    <param id="0" name="First value">dot1.IID</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">dot1(-1).IID - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="315065818837096" type="System">
+                                    <param id="0" name="Variable">IID</param>
+                                    <param id="1" name="Value">dot1.IID</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="468876827288249" type="System">
+                                    <param id="0" name="Variable">tx</param>
+                                    <param id="1" name="Value">dot1(IID).X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="797579449189976" type="System">
+                                    <param id="0" name="Variable">ty</param>
+                                    <param id="1" name="Value">dot1(IID).Y</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="635873995653423" type="head">
+                                    <param id="0" name="X">tx</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="678391137320219" type="head">
+                                    <param id="0" name="Y">ty</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="802776259661233">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="659770750578015" type="System">
+                                            <param id="0" name="Object">dot1</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="564801370961420" type="System">
+                                            <param id="0" name="Object">dot1</param>
+                                            <param id="1" name="Expression">dot1.IID</param>
+                                            <param id="2" name="Comparison">5</param>
+                                            <param id="3" name="Value">IID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="787122867968429" type="dot1" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>随机线 阻止</comment>
+        <event-block sid="772544825678468">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="122585770329466" type="System">
+                    <param id="0" name="First value">head.X &gt;= 4950 &amp; head.X &lt; 6930 </param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="651770854462688" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="998712671887825" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>实线 阻止</comment>
+        <event-block sid="509175043767484">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="310867005224734" type="System">
+                    <param id="0" name="First value">head.X &gt;= 3960 &amp; head.X &lt; 4950 </param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="229482996249750" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="290306619887833" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>虚线 消除</comment>
+        <event-block sid="839271542016226">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="607525776430678" type="System">
+                    <param id="0" name="First value">head.X &gt;= 2970 &amp; head.X &lt; 3960 </param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="488263036538128" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="473213230911223" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>随机线 直线</comment>
+        <event-block sid="829726543372343">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="319499089333811" type="System">
+                    <param id="0" name="First value">head.X &gt;= 6930 &amp; head.X &lt; 8910 </param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="591914241130463" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="943719178481881" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="408440834714573">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="457220018745160" type="c15" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="661919897041178" type="c16">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="576838886515110" type="c16" />
+            </actions>
+        </event-block>
+        <event-block sid="930324594172308">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="427590009504003" type="c16" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="225603526520179" type="System">
+                    <param id="0" name="Layout">end</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="435560560972703" title="Sub">
+            <sub-events>
+                <event-block sid="910614216402340">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="695854268729057" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">990</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="351118447534690" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="885270186784999" type="c1" />
+                        <action id="-15" name="Set visible" sid="325503838065570" type="c1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="636460288833096">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="562247187624052" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1400</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="928296609632157" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="835098747987289" type="c2" />
+                        <action id="-15" name="Set visible" sid="543580270480166" type="c2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="983375033462940">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="478555585444671" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1900</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="211790992303997" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="636281572463830" type="c3" />
+                        <action id="-15" name="Set visible" sid="620235015923911" type="c3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564123771421191">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="220900816221989" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2400</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="785458251235178" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="746206151766165" type="c4" />
+                        <action id="-15" name="Set visible" sid="538760112081103" type="c4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="805892602006331">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="531258803559850" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2970</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="896298528546503" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="352864933910990" type="c5" />
+                        <action id="-15" name="Set visible" sid="608187858339484" type="c5">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="767097895838526">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="478187056255847" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3460</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="734532056724929" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="332563000746922" type="c6" />
+                        <action id="-15" name="Set visible" sid="761715498197277" type="c6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="902909970147311">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="183525989265639" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3960</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="770748222114341" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="257986356177349" type="c7" />
+                        <action id="-15" name="Set visible" sid="610277595243086" type="c7">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797243321516763">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="858545287072479" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">44000</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="365921479690307" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="793098896173934" type="c8" />
+                        <action id="-15" name="Set visible" sid="967669792754342" type="c8">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="465846254045496">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="349491145514701" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4950</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="233203653806068" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="819500305179803" type="c9" />
+                        <action id="-15" name="Set visible" sid="125053939448759" type="c9">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513160704182064">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="644351548699828" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5610</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="180788167235642" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="138142567170269" type="c10" />
+                        <action id="-15" name="Set visible" sid="589418770818489" type="c10">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="537234268089278">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="983218528842605" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6270</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="568062698954879" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="887170031579039" type="c11" />
+                        <action id="-15" name="Set visible" sid="355534336520474" type="c11">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="125573501012516">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="644000186248628" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">6930</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="453478034337835" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="965871874587017" type="c12" />
+                        <action id="-15" name="Set visible" sid="430685172468862" type="c12">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977218647285396">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="588114550918347" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">7590</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="565111739926580" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="702380022018025" type="c13" />
+                        <action id="-15" name="Set visible" sid="866414677345591" type="c13">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="285551365530016">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="451500730764617" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">8250</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="968110012171805" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="572027844475533" type="c14" />
+                        <action id="-15" name="Set visible" sid="187778876804441" type="c14">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="507108196436924">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="741909408672102" type="System">
+                            <param id="0" name="Variable">txMAX</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">8910</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="169213094944967" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="881742872323497" type="c15" />
+                        <action id="-15" name="Set visible" sid="801253889676751" type="c15">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="160681006612858" title="Phio">
+            <sub-events>
+                <comment>对称虚线 爱情</comment>
+                <event-block sid="680370889897019">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="373453210787806" type="System">
+                            <param id="0" name="Variable">draw2</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="888909254522719" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="457371163028077" type="System">
+                            <param id="0" name="Object to create">Family</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">tx</param>
+                            <param id="3" name="Y">1080 - ty</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="120414633213130" type="System">
+                            <param id="0" name="Variable">draw2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>实线 结婚</comment>
+                <event-block sid="991440744988018">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="717996422562958" type="System">
+                            <param id="0" name="Variable">draw2</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="874973234989801" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="551124979764989" type="head2">
+                            <param id="0" name="X">head.X</param>
+                            <param id="1" name="Y">1080 - head.Y</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="619325045556463" type="System">
+                            <param id="0" name="Object to create">Family</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">tx</param>
+                            <param id="3" name="Y">1080 - ty</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="803721578816199" type="System">
+                            <param id="0" name="Variable">draw2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>随机移动 孩子</comment>
+                <event-block sid="612013518765343">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="752700766882405" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="634846271938639" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1070</param>
+                        </condition>
+                        <condition id="2" name="Is in touch" sid="640568524772367" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="690393272083540" type="System">
+                            <param id="0" name="Variable">scroll</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="745532701079664" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="668835801908886" type="head2">
+                            <param id="0" name="Angle">head2.Angle</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="743181268355894" type="System">
+                            <param id="0" name="Object to create">Family</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">head2.X</param>
+                            <param id="3" name="Y">head2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>直线，老年</comment>
+                <event-block sid="490448644189154">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="596070089366752" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="462194845268569" type="System">
+                            <param id="0" name="Variable">draw</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="702767585416520" type="System">
+                            <param id="0" name="Variable">scroll</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="742064235899370" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="466673889784431" type="System">
+                            <param id="0" name="Object to create">line</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">tx</param>
+                            <param id="3" name="Y">ty</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="961898956965900" type="System">
+                            <param id="0" name="Variable">n</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="659508780004467" type="head">
+                            <param id="0" name="X">head.X+ 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="234790051339806" type="System">
+                            <param id="0" name="Variable">tx</param>
+                            <param id="1" name="Value">head.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="126680244538172" type="System">
+                            <param id="0" name="Variable">ty</param>
+                            <param id="1" name="Value">head.y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>超出边界掉头</comment>
+                <event-block sid="287522904085462">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="371324184701124" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1070</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="494670780274095" type="System">
+                            <param id="0" name="First value">head2.X</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">12800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="905847517985669" type="head2">
+                            <param id="0" name="Angle">head2.Angle * -1</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="779542503873342" type="head2">
+                            <param id="0" name="Angle">head2.Angle</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="611086216616317" type="System">
+                            <param id="0" name="Object to create">Family</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">head2.X</param>
+                            <param id="3" name="Y">head2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="692303918292314">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="366106502585208" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="738548101944790" type="System">
+                            <param id="0" name="First value">head2.X</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">12800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="374231088607471" type="head2">
+                            <param id="0" name="Angle">head2.Angle * -1</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="720865011826929" type="head2">
+                            <param id="0" name="Angle">head2.Angle</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="572990911260274" type="System">
+                            <param id="0" name="Object to create">Family</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">head2.X</param>
+                            <param id="3" name="Y">head2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>随机移动</comment>
+                <event-block sid="322370542550548">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="130666760623221" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="825531550232786" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1070</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="671615925626075" type="System">
+                            <param id="0" name="First value">(head2.X - head2.h2x)^2 + (head2.Y - head2.h2y)^2 </param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">head2.h2l</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="822145064902699" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="971303079575154" type="head2">
+                            <param id="0" name="Angle">-90 + random(180)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="456960314969711" type="head2">
+                            <param id="0" name="Instance variable">h2l</param>
+                            <param id="1" name="Value">100 + random(10000)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="307463239034011" type="head2">
+                            <param id="0" name="Instance variable">h2x</param>
+                            <param id="1" name="Value">head2.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="993505690991370" type="head2">
+                            <param id="0" name="Instance variable">h2y</param>
+                            <param id="1" name="Value">head2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>离开</comment>
+                <event-block sid="400402468320555">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="268755279474074" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">10</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="385194849287980" type="System">
+                            <param id="0" name="First value">head2.Y</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">1070</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="793942340893423" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="940387329743036" type="head2">
+                            <param id="0" name="Angle">head2.Angle</param>
+                            <param id="1" name="Distance">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="304678933699077" type="System">
+                            <param id="0" name="Object to create">Family</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">head2.X</param>
+                            <param id="3" name="Y">head2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="572630304443953">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="902973509990905" type="System" />
+                        <condition id="-14" name="Compare variable" sid="428909215892118" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="255699803489346" type="head2">
+                            <param id="0" name="X">tx</param>
+                            <param id="1" name="Y">1080 - ty</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="246788026089943" type="head2">
+                            <param id="0" name="Angle">-90 + random(180)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="654521166410384" type="head2">
+                            <param id="0" name="Instance variable">h2x</param>
+                            <param id="1" name="Value">head2.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="600465932060659" type="head2">
+                            <param id="0" name="Instance variable">h2y</param>
+                            <param id="1" name="Value">head2.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="872866709066225" type="head2">
+                            <param id="0" name="Instance variable">h2l</param>
+                            <param id="1" name="Value">10000 + random(10000)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="784165841387323">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="990262769021375" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="517495747616562" type="Life">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;title&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="496545026647410" type="dot">
+                    <param id="0" name="X">-30</param>
+                    <param id="1" name="Y">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="466107764914528">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="570023149621848" type="Life">
+                    <param id="0" name="Tag">&quot;title&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="388713224666359" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="799941791990682" type="dot">
+                    <param id="0" name="Instance variable">start</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="133043422868149" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

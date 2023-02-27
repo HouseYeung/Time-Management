@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fragmentation</name>
+    <events>
+        <event-block sid="331910310422366">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="263197275898483" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="766305923466314" type="fragmentation">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;title&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="432077056961946" type="items">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="135031475231668">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="405263274063680" type="fragmentation">
+                    <param id="0" name="Tag">&quot;title&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="692393946056818" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="787123809319965" type="f1" />
+                <action id="-15" name="Set visible" sid="879670558517952" type="f1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="901242625373082">
+            <conditions>
+                <condition id="3" name="On touched object" sid="351891870939462" type="Touch">
+                    <param id="0" name="Object">Sponge</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="858878854532994" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="425409104853090" type="Sponge">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="847973559233452" type="control">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;s&quot;</param>
+                </action>
+                <action id="-11" name="Add to" sid="488686295438900" type="Sponge">
+                    <param id="0" name="Instance variable">touch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="688049599643067" type="Hourglass">
+                    <param id="0" name="Instance variable">turn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="921540926467429">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="206614874304652" type="control">
+                    <param id="0" name="Tag">&quot;s&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="456820712870877" type="Hourglass">
+                    <param id="0" name="Instance variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="683307052617452" type="control">
+                    <param id="0" name="Instance variable">move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="126069579964545">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="382895264673298" type="Hourglass">
+                    <param id="0" name="Instance variable">turn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="346367374500068" type="Hourglass">
+                    <param id="0" name="Degrees">10</param>
+                </action>
+                <action id="-11" name="Add to" sid="326992942805248" type="Hourglass">
+                    <param id="0" name="Instance variable">r</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="730416068613417">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="893686760549593" type="Hourglass">
+                    <param id="0" name="Instance variable">r</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">36</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="596601013740573" type="Hourglass">
+                    <param id="0" name="Instance variable">turn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="597445604225993" type="Hourglass">
+                    <param id="0" name="Instance variable">r</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962897218599123">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="524871248888711" type="schedule">
+                    <param id="0" name="Instance variable">score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="917617631947696" type="items">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="602392709606898" type="System">
+                    <param id="0" name="Object to create">tomato</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(1980)</param>
+                    <param id="3" name="Y">random(1080)</param>
+                </action>
+                <action id="-11" name="Add to" sid="836190237806197" type="control">
+                    <param id="0" name="Instance variable">n</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277608827965849">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="765698475988606" type="control">
+                    <param id="0" name="Instance variable">n</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="106347212113494" type="System">
+                    <param id="0" name="Layout">Drown</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="851381195465670" title="Group">
+            <sub-events>
+                <event-block sid="505311248883303">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="303689264558917" type="lists" />
+                        <condition id="1" name="Is overlapping another object" sid="829917510837294" type="schedule">
+                            <param id="0" name="Object">lists</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="146309132214491" type="lists">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="675254986854697" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="539391007655616">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="318685200421260" type="bills" />
+                        <condition id="1" name="Is overlapping another object" sid="223469485837242" type="schedule">
+                            <param id="0" name="Object">bills</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="352647765729929" type="bills">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="257864201917645" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="404612754059867">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="939264189362664" type="calls" />
+                        <condition id="1" name="Is overlapping another object" sid="641322801156020" type="schedule">
+                            <param id="0" name="Object">calls</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="355394028783413" type="calls">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="186742348057938" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="475885210703309">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="237755397598850" type="email" />
+                        <condition id="1" name="Is overlapping another object" sid="234543454957273" type="schedule">
+                            <param id="0" name="Object">email</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="188726745378137" type="email">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="597721752930796" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754832430813598">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="818966450211730" type="events" />
+                        <condition id="1" name="Is overlapping another object" sid="439641852695925" type="schedule">
+                            <param id="0" name="Object">events</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="682674754327581" type="events">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="378372330097485" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="356756535949090">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="447472216744233" type="thoughts" />
+                        <condition id="1" name="Is overlapping another object" sid="164198131938365" type="schedule">
+                            <param id="0" name="Object">thoughts</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="605139764988126" type="thoughts">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="461835354556954" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="179520231229802">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="263765243968647" type="tasks" />
+                        <condition id="1" name="Is overlapping another object" sid="110572316261908" type="schedule">
+                            <param id="0" name="Object">tasks</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="241044520562331" type="tasks">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="611779531299379" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355071618854795">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="773527497751092" type="mail" />
+                        <condition id="1" name="Is overlapping another object" sid="247317629946849" type="schedule">
+                            <param id="0" name="Object">mail</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="625542045205017" type="mail">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="813485111951964" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="248952020622352">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="436050937408438" type="stickies" />
+                        <condition id="1" name="Is overlapping another object" sid="876901889031356" type="schedule">
+                            <param id="0" name="Object">stickies</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="722911901007094" type="stickies">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="746994164927208" type="schedule">
+                            <param id="0" name="Instance variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="967329713508598" title="Group2">
+            <sub-events>
+                <event-block sid="976809156637467">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="581434606451751" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="147068643394711" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="684245802095973" type="lists">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994666638346738">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="894367196940106" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="644361160141773" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="121543333696304" type="email">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567582551163173">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="626753279581263" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="472841468710804" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="937685759958993" type="stickies">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="556942794241305">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="349144425730682" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="486406512347496" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="679282861228852" type="mail">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="389717701128967">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="412437379792178" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="492478739629449" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="663947185669191" type="events">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="774731968280021">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="208945724225754" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="840178107606094" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="632738057356059" type="thoughts">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="411276081227075">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="841534104369091" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="204113795900622" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="957186026092999" type="bills">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="214709697637613">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="388198342839121" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="332657521571420" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="312624566967886" type="tasks">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253272750526435">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="546046935517731" type="Sponge">
+                            <param id="0" name="Instance variable">touch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="129669150281900" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="114126310728860" type="calls">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="579492609595973" type="Sponge">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="761540549386015" type="schedule">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="768490145033492" type="f1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="360599002129658" type="f2" />
+                        <action id="-15" name="Set visible" sid="750416436700069" type="f2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="202840622311369" type="items">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
